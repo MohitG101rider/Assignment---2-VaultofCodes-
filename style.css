@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background: linear-gradient(to right, #f9f9ff, #e7f0ff);
+  color: #333;
+  padding: 40px 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.8rem;
+  color: #2d2d2d;
+  margin-bottom: 3rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  background: linear-gradient(90deg, #556ee6, #6cd4ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeInDown 1s ease-in-out both;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.internship-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+  position: relative;
+  border: 1px solid #e0e0e0;
+  animation: fadeUp 1s ease forwards;
+}
+
+.internship-card:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 2px 20px rgb(125, 3, 255);
+}
+
+.internship-card h2 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: #0e2a47;
+  border-left: 4px solid #6cd4ff;
+  padding-left: 0.8rem;
+}
+
+.internship-card ul {
+  list-style: none;
+  padding-left: 0;
+  line-height: 1.8;
+  font-size: 0.96rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.internship-card ul li::before {
+  content: "✔";
+  color: #2aa1ff;
+  margin-right: 0.5rem;
+  font-weight: bold;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, #556ee6, #6cd4ff);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(85, 110, 230, 0.3);
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(85, 110, 230, 0.5);
+}
+
+/* Animations */
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .internship-card h2 {
+    font-size: 1.2rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
+}
